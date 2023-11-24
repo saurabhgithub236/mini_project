@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Web App - Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <h1>Hospital Web App</h1>
+    </header>
+    <main>
+        <section id="login">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="role">Select your role:</label>
+                <select id="role" name="role">
+                    <option value="user">User</option>
+                    <option value="hospital">Hospital</option>
+                </select>
+
+                <button type="submit">Log In</button>
+            </form>
+            <div id="login-status"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Hospital Web App</p>
+    </footer>
+    <script src="login.js"></script>
+</body>
+</html>

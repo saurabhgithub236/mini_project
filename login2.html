@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Web App - Login</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        main {
+           
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #login-page{
+            display:block;
+            width: 100%;
+            height: 500px;
+        }
+        #login-image{
+            display: inline;
+            width: 40%;
+
+        }
+        #login-image img{
+            display: inline;
+            height:500px ;
+        }
+        #login{
+            width: 40%;
+            height: 95%;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        form {
+            display: grid;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        footer {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hospital Web App</h1>
+    </header>
+    <main>
+        <div id="login-page">
+            <div id="login-image"><img src="https://plus.unsplash.com/premium_photo-1673953510197-0950d951c6d9?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img">
+            </div>
+            <div id="login">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+    
+                    <label for="role">Select your role:</label>
+                    <select id="role" name="role">
+                        <option value="user">User</option>
+                        <option value="hospital">Hospital</option>
+                    </select>
+    
+                    
+                    <button type="submit">Log In</button>
+                </form>
+                <div id="login-status"></div>
+          </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Hospital Web App</p>
+    </footer>
+    <script src="login.js"></script>
+</body>
+</html>
