@@ -1,30 +1,49 @@
 /* Add your CSS styles here */
+
+/* body  */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
+/* header  */
 header {
     background-color: #007BFF;
     color: white;
     text-align: center;
-    padding: 20px;
+   
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-
-header li a{
+#title{
+    font-size: 1.5rem;
+}
+#login{
+    display: inline-block;
+    width: 135px;
+    height: 22px;
+    padding: 2px 9px;
+   
+    list-style: none;
+   
+    padding: 3px 3px;
+    border-radius: 15px;
+    background-color: #333;
+    transform: 1.5;
+}
+#login a{
+    text-decoration: none;
+    color: #dadada;
+}
+/* header li a{
     list-style-type: none;
     text-decoration: none;
     color: burlywood;
-}
-#login{
-    float: right;
-    padding: 10px 10px;
-    border-radius: 15px;
-    background-color: #333;
-}
+} */
+
+/* navbar  */
 nav {
     background-color: #333;
     color: rgb(196, 27, 27);
@@ -38,14 +57,16 @@ nav ul {
     justify-content: space-around;
 }
 
-nav li {
+nav li a{
     /* margin: auto;
     padding: auto; */
+    font-size: 1.2rem;
 }
 
 nav a {
     text-decoration: auto;
     color: white;
+    /* font-size: 2rem; */
 }
 
 main {
@@ -57,7 +78,7 @@ section {
     border: 1px solid #ccc;
     padding: 20px;
 }
-
+/* footer  */
 footer {
     background-color: #333;
     color: white;
