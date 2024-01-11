@@ -3,40 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Web App</title>
-    <link rel="stylesheet" href="style.css">
+    <title>About Us - Hospital Web App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section#aboutUs {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+            background: linear-gradient(45deg, #f5f5f5 25%, transparent 25%, transparent 75%, #f5f5f5 75%, #f5f5f5),
+                        linear-gradient(-45deg, #f5f5f5 25%, transparent 25%, transparent 75%, #f5f5f5 75%, #f5f5f5);
+            background-size: 20px 20px;
+        }
+
+        section#aboutUs p {
+            margin-bottom: 15px;
+        }
+
+        section#aboutUs ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        section#aboutUs li {
+            margin-bottom: 8px;
+        }
+
+        section#aboutUs img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <li type="none" id="title"><a href="/index.html">Hospital Web App</a></li> 
-        <li type="none" id="login"><a href="./login.html">LOGIN/SIGNUP</a></li>
+        <ul>
+            <li id="title"><a href="/index.html">Hospital Web App</a></li> 
+            <li id="login"><a href="login.html">LOGIN/SIGNUP</a></li>
+        </ul>
     </header>
     <nav class="nav">
         <ul>
-            <li><a href="/bloodAvailability.html">Blood Availability</a></li>
-            <li><a href="/nearestHospital.html">Nearest Hospitals</a></li>
-            <li><a href="/services.html">Services</a></li>
-            <li><a href="/medicalConsultation.html">medical consultation</a></li>
-            <li><a href="/Rehabilatation.html">Rehabhilatation support</a></li>
-            <li><a href="/aboutUs.html">about us</a></li>
-            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="bloodAvailability.html">Blood Availability</a></li>
+            <li><a href="nearestHospital.html">Nearest Hospitals</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="medicalConsultation.html">Medical Consultation</a></li>
+            <li><a href="Rehabilatation.html">Rehabilitation Support</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
         </ul>
     </nav>
     <main>
-        <section id="blood-availability">
-            <h2>Real-time Blood Availability</h2>
-            <p>Check the real-time availability of blood types in your area:</p>
-            <!-- Blood availability content goes here -->
-        </section>
-        <section id="iot-devices">
-            <h2>IoT Devices for Patients</h2>
-            <p>Monitor and manage IoT devices for patients:</p>
-            <!-- IoT devices content goes here -->
-        </section>
-        <section id="nearest-hospitals">
-            <h2>Locate Nearest Hospitals</h2>
-            <p>Find the nearest hospitals using Google Maps:</p>
-            <!-- Nearest hospitals content goes here -->
+        <section id="aboutUs">
+            <h1>About Us</h1>
+            <p>Welcome to Hospital Web App, where our mission is to provide accessible and quality healthcare services to our community. With a team of dedicated professionals, we strive to make a positive impact on people's lives through innovative medical solutions and compassionate care.</p>
+
+            <p>At Hospital Web App, we believe in:</p>
+            <ul>
+                <li>Putting Patients First: Our patients are at the center of everything we do. We prioritize their well-being and comfort.</li>
+                <li>Excellence in Healthcare: Striving for excellence in medical services, from diagnosis to treatment and follow-up care.</li>
+                <li>Community Engagement: Actively engaging with the local community to understand their healthcare needs and concerns.</li>
+                <li>Continuous Innovation: Embracing cutting-edge medical technologies and practices to provide the best care possible.</li>
+                <li>Empowering our Team: Fostering a supportive and collaborative environment for our healthcare professionals to thrive.</li>
+            </ul>
+
+            <p>Our hospital has been serving the community for over two decades, and we take pride in the positive outcomes and success stories we've been a part of. We have a state-of-the-art facility equipped with the latest medical equipment and a highly skilled medical team.</p>
+
+            <p>As a part of our commitment to community health, we regularly organize health awareness programs, free medical check-ups, and blood donation drives. We are dedicated to not only treating illnesses but also preventing them through education and proactive healthcare initiatives.</p>
+
+            <p>Thank you for choosing Hospital Web App for your healthcare needs. We look forward to continuing to serve and support our community for many years to come.</p>
+
+            <!-- Image for illustration, replace with your hospital's image -->
+            <img src="https://media.gettyimages.com/id/1312706504/photo/modern-hospital-building.jpg?s=1024x1024&w=gi&k=20&c=RXpNBi29PyBzIPD7aWekJImubSm_mZuCXrYCZsRCPDQ=" alt="Hospital Image">
+
+            <!-- Additional content or sections can be added as needed -->
         </section>
     </main>
     <footer>

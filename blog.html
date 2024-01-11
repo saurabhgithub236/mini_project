@@ -1,17 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Web App</title>
+    <title>Hospital Web App - Blog</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        main {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
+        #search-container {
+            margin-bottom: 20px;
+        }
+
+        #search-input {
+            padding: 10px;
+            width: 70%;
+            box-sizing: border-box;
+        }
+
+        #search-container button {
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result-container {
+            text-align: center;
+        }
+
+        #symptom-prediction {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+        }
+
+        #symptom-prediction h2 {
+            color: #3498db;
+        }
+
+        #symptoms {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        #symptom-prediction button {
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #prediction-result {
+            margin-top: 10px;
+            color: #27ae60;
+        }
     </style>
 </head>
+
 <body>
     <header>
-        <li type="none" id="title"><a href="/index.html">Hospital Web App</a></li> 
+        <li type="none" id="title"><a href="/index.html">Hospital Web App</a></li>
         <li type="none" id="login"><a href="./login.html">LOGIN/SIGNUP</a></li>
     </header>
     <nav class="nav">
@@ -26,11 +86,139 @@
         </ul>
     </nav>
     <main>
-     
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Search for a disease...">
+            <button onclick="searchDisease(document.getElementById('search-input').value)">Search</button>
+        </div>
+
+        <div id="result-container"></div>
+
+        <!-- Add the symptom prediction form -->
+        <div id="symptom-prediction">
+            <h2>Symptom Prediction</h2>
+            <form onsubmit="predictDisease(); return false;">
+                <label for="symptoms">Enter your symptoms:</label>
+                <textarea id="symptoms" placeholder="Enter symptoms here..." required></textarea>
+                <button type="submit">Predict</button>
+            </form>
+            <div id="prediction-result"></div>
+        </div>
     </main>
     <footer>
         <p>&copy; 2023 Hospital Web App</p>
     </footer>
     <script src="app.js"></script>
+
+    <script>
+        function searchDisease() {
+            // Get the input value
+            var diseaseName = document.getElementById("search-input").value;
+
+            // TODO: Make an API request to fetch disease information
+            // For now, let's create a dummy data
+            var dummyData = {
+                name: "Example Disease",
+                details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+                image: "example_image.jpg"
+            };
+
+            // Display the result
+            displayResult(dummyData);
+        }
+
+        function displayResult(data) {
+            var resultContainer = document.getElementById("result-container");
+
+            // Create elements to display disease information
+            var diseaseNameElement = document.createElement("h2");
+            diseaseNameElement.textContent = data.name;
+
+            var detailsElement = document.createElement("p");
+            detailsElement.textContent = data.details;
+
+            var imageElement = document.createElement("img");
+            imageElement.src = data.image;
+            imageElement.alt = data.name;
+
+            // Clear previous results
+            resultContainer.innerHTML = "";
+
+            // Append elements to the result container
+            resultContainer.appendChild(diseaseNameElement);
+            resultContainer.appendChild(detailsElement);
+            resultContainer.appendChild(imageElement);
+        }
+
+        function predictDisease() {
+            // Get the symptoms input
+            var symptomsInput = document.getElementById("symptoms").value;
+
+            // TODO: Implement logic to predict disease based on symptoms
+            // For now, let's create a dummy prediction
+            var dummyPrediction = "You may have a common cold.";
+
+            // Display the prediction result
+            var predictionResult = document.getElementById("prediction-result");
+            predictionResult.textContent = "Prediction: " + dummyPrediction;
+        }
+
+
+
+        // app.js
+
+// Sample array of diseases
+const diseases = [
+    {
+        name: "Common Cold",
+        details: "The common cold is a viral infection that affects the upper respiratory tract. Symptoms include a runny nose, sneezing, and coughing.",
+        image: "common_cold.jpg"
+    },
+    {
+        name: "Influenza (Flu)",
+        details: "Influenza, commonly known as the flu, is a contagious respiratory illness caused by influenza viruses. Symptoms include fever, cough, and body aches.",
+        image: "flu.jpg"
+    },
+    // Add more diseases as needed
+];
+
+// Function to search for a disease by name
+function searchDisease(diseaseName) {
+    // Find the disease in the array
+    const disease = diseases.find(d => d.name.toLowerCase() === diseaseName.toLowerCase());
+
+    if (disease) {
+        // Display the detailed information
+        displayResult(disease);
+    } else {
+        alert("Disease not found.");
+    }
+}
+
+// Function to display detailed information about a disease
+function displayResult(data) {
+    var resultContainer = document.getElementById("result-container");
+
+    // Create elements to display disease information
+    var diseaseNameElement = document.createElement("h2");
+    diseaseNameElement.textContent = data.name;
+
+    var detailsElement = document.createElement("p");
+    detailsElement.textContent = data.details;
+
+    var imageElement = document.createElement("img");
+    imageElement.src = data.image;
+    imageElement.alt = data.name;
+
+    // Clear previous results
+    resultContainer.innerHTML = "";
+
+    // Append elements to the result container
+    resultContainer.appendChild(diseaseNameElement);
+    resultContainer.appendChild(detailsElement);
+    resultContainer.appendChild(imageElement);
+}
+
+    </script>
 </body>
+
 </html>

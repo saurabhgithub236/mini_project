@@ -3,10 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Web App</title>
+    <title>Hospital Web App - Blood Availability</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            background:url(https://wallpapercave.com/dwp1x/wp7898197.jpg) no-repeat center center/cover;
+            /* background-image: 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') no-repeat center center/cover; Replace 'background.jpg' with your image */
+            color: #333;
+        }
 
+        header, nav, main, footer {
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header a, nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        header a:hover, nav a:hover {
+            color: #ff6347;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        main {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #ff6347;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #ff6347;
+            color: #fff;
+        }
+
+        td {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
     </style>
 </head>
 <body>
@@ -19,14 +100,55 @@
             <li><a href="/bloodAvailability.html">Blood Availability</a></li>
             <li><a href="/nearestHospital.html">Nearest Hospitals</a></li>
             <li><a href="/services.html">Services</a></li>
-            <li><a href="/medicalConsultation.html">medical consultation</a></li>
-            <li><a href="/Rehabilatation.html">Rehabhilatation support</a></li>
-            <li><a href="/aboutUs.html">about us</a></li>
+            <li><a href="/medicalConsultation.html">Medical Consultation</a></li>
+            <li><a href="/Rehabilatation.html">Rehabilitation Support</a></li>
+            <li><a href="/aboutUs.html">About Us</a></li>
             <li><a href="/blog.html">Blog</a></li>
         </ul>
     </nav>
     <main>
-     
+        <h1>Blood Availability</h1>
+        <p>Check the availability of blood types at our hospital:</p>
+
+        <table>
+            <tr>
+                <th>Blood Type</th>
+                <th>Available Units</th>
+            </tr>
+            <tr>
+                <td>A+</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>B+</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>A-</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>B-</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>AB+</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>AB-</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>O+</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>O-</td>
+                <td>15</td>
+            </tr>
+            <!-- Add more rows for other blood types -->
+        </table>
     </main>
     <footer>
         <p>&copy; 2023 Hospital Web App</p>

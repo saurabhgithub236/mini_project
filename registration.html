@@ -1,0 +1,182 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hospital Web App - Registration</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://watermark.lovepik.com/photo/40176/5101.jpg_wh1200.jpg') center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Add your additional styles here if needed */
+
+        header {
+            /* Add styles for the header */
+        }
+
+        nav {
+            /* Add styles for the navigation bar */
+        }
+
+        main {
+            /* Add styles for the main content */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #registration-page {
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #registration-form {
+            /* Add styles for the registration form */
+            max-width: 400px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        button {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }   
+
+        #registration-status {
+            color: red;
+            font-weight: bold;
+        }
+
+        footer {
+            /* Add styles for the footer */
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+    </head>
+
+    <body>
+        <header>
+            <li type="none" id="title"><a href="/index.html">Hospital Web App</a></li>
+            <li type="none" id="login"><a href="./login.html">LOGIN/SIGNUP</a></li>
+        </header>
+        <nav class="nav">
+            <ul>
+                <li><a href="#blood-availability">Blood Availability</a></li>
+                <!-- Add other navigation items as needed -->
+            </ul>
+        </nav>
+        <main>
+            <div id="registration-page">
+                <div id="registration-form">
+                    <h2>Registration</h2>
+                    <form id="registration-form" onsubmit="registerUser(event)">
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                        <br><br>
+
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                        <br><br>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <br><br>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                        <br><br>
+
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                        <br><br>
+
+                        <label for="role">Select your role:</label>
+                        <select id="role" name="role">
+                            <option value="user">User</option>
+                            <option value="hospital">Hospital</option>
+                        </select>
+
+                        <button type="submit">Register</button>
+                    </form>
+                    <div id="registration-status"></div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2023 Hospital Web App</p>
+        </footer>
+        <script src="registration.js"></script>
+        <script src="server.js"></script>
+    </body>
+    <script>
+    // registration.js
+
+    function registerUser(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Get form values
+        const fullName = document.getElementById('fullname').value;
+        const username = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
+        const role = document.getElementById('role').value;
+
+        // Perform validation (you can add more validation as needed)
+        if (password !== confirmPassword) {
+            document.getElementById('registration-status').innerHTML = 'Passwords do not match.';
+            return;
+        }
+
+        // Send registration data to the server (you can customize this part)
+        // For simplicity, let's just log the data to the console
+        console.log({
+            fullName,
+            username,
+            email,
+            password,
+            role,
+        });
+
+        // Display success message (you can replace this with actual server response)
+        document.getElementById('registration-status').innerHTML = 'Registration successful!';
+    }
+
+
+    </script>
+    </html>

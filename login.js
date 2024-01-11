@@ -1,5 +1,3 @@
-// JavaScript for handling login functionality
-
 document.getElementById('login-form').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -8,9 +6,6 @@ document.getElementById('login-form').addEventListener('submit', function (e) {
     const role = document.getElementById('role').value;
 
     // Send an AJAX request to your server to handle the login based on the role
-    // You will need to implement server-side logic for authentication
-
-    //Example AJAX request:
     fetch('/login', {
         method: 'POST',
         body: JSON.stringify({ username, password, role }),
@@ -23,10 +18,16 @@ document.getElementById('login-form').addEventListener('submit', function (e) {
         const loginStatus = document.getElementById('login-status');
         if (data.success) {
             loginStatus.textContent = 'Login successful. Redirecting...';
+            
             // Redirect to the appropriate dashboard based on the role
-            window.location.href = data.redirectURL;
+            window.location.href = http://127.0.0.1:5501/services.html;
         } else {
             loginStatus.textContent = 'Login failed. Please check your credentials.';
         }
+    })
+    .catch(error => {
+        console.error('Error during login:', error);
+        const loginStatus = document.getElementById('login-status');
+        loginStatus.textContent = 'An error occurred during login. Please try again.';
     });
 });

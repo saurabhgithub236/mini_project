@@ -3,10 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Web App</title>
+    <title>Hospital Web App - Rehabilitation Support</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        header a:hover {
+            color: #ff6361;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        main {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #ff6361;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
     </style>
 </head>
 <body>
@@ -14,23 +78,36 @@
         <li type="none" id="title"><a href="/index.html">Hospital Web App</a></li> 
         <li type="none" id="login"><a href="./login.html">LOGIN/SIGNUP</a></li>
     </header>
-    <nav class="nav">
+    <nav>
         <ul>
             <li><a href="/bloodAvailability.html">Blood Availability</a></li>
             <li><a href="/nearestHospital.html">Nearest Hospitals</a></li>
             <li><a href="/services.html">Services</a></li>
-            <li><a href="/medicalConsultation.html">medical consultation</a></li>
-            <li><a href="/Rehabilatation.html">Rehabhilatation support</a></li>
-            <li><a href="/aboutUs.html">about us</a></li>
+            <li><a href="/medicalConsultation.html">Medical Consultation</a></li>
+            <li><a href="/Rehabilatation.html">Rehabilitation Support</a></li>
+            <li><a href="/aboutUs.html">About Us</a></li>
             <li><a href="/blog.html">Blog</a></li>
         </ul>
     </nav>
     <main>
-     
+        <h1>Rehabilitation Support</h1>
+        <p>
+            Our rehabilitation services aim to provide comprehensive support and care for individuals
+            recovering from injuries, surgeries, or chronic conditions. Our team of dedicated professionals
+            is committed to helping you regain your strength, mobility, and independence.
+        </p>
+        <p>
+            We offer personalized rehabilitation programs, including physical therapy, occupational therapy,
+            and speech therapy. Our state-of-the-art facilities and experienced therapists ensure that you
+            receive the highest quality care to achieve your rehabilitation goals.
+        </p>
+        <p>
+            Whether you're recovering from surgery, managing a chronic condition, or seeking support for
+            a specific rehabilitation need, our team is here to assist you on your journey to recovery.
+        </p>
     </main>
     <footer>
         <p>&copy; 2023 Hospital Web App</p>
     </footer>
-    <script src="app.js"></script>
 </body>
 </html>

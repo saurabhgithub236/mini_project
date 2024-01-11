@@ -6,7 +6,76 @@
     <title>Hospital Web App</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://as2.ftcdn.net/v2/jpg/06/30/07/51/1000_F_630075147_hFX9sPPOcr5OmRfSsrho5dwzYcUCnmyf.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        header a:hover {
+            color: #ff6361;
+        }
+
+        nav {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        main {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #fff;
+            padding: 10px;
+            background-color: rgb(47, 186, 224);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -19,14 +88,41 @@
             <li><a href="/bloodAvailability.html">Blood Availability</a></li>
             <li><a href="/nearestHospital.html">Nearest Hospitals</a></li>
             <li><a href="/services.html">Services</a></li>
-            <li><a href="/medicalConsultation.html">medical consultation</a></li>
-            <li><a href="/Rehabilatation.html">Rehabhilatation support</a></li>
-            <li><a href="/aboutUs.html">about us</a></li>
+            <li><a href="/medicalConsultation.html">Medical Consultation</a></li>
+            <li><a href="/Rehabilatation.html">Rehabilitation Support</a></li>
+            <li><a href="/aboutUs.html">About Us</a></li>
             <li><a href="/blog.html">Blog</a></li>
         </ul>
     </nav>
     <main>
-     
+        <h1>Our Services</h1>
+        <p>Welcome to our hospital! We offer a range of services to cater to your health needs.</p>
+
+        <div class="services-container">
+            <div class="service-item">
+                <img src="https://as2.ftcdn.net/v2/jpg/06/16/78/75/1000_F_616787557_ce1GXNmd6MNQvkeXTu3wmIW087mrxP5P.jpg" alt="Service 1">
+                <h2>Specialized Care</h2>
+                <p>Receive personalized and specialized medical care from our experienced team.</p>
+            </div>
+
+            <div class="service-item">
+                <img src="https://as2.ftcdn.net/v2/jpg/06/19/57/43/1000_F_619574308_pDeiP24dLD0lp7pmL5VOQGmu9RSVF5O5.jpg" alt="Service 2">
+                <h2>State-of-the-Art Facilities</h2>
+                <p>Access cutting-edge medical facilities to ensure the best treatment outcomes.</p>
+            </div>
+
+            <div class="service-item">
+                <img src="https://as2.ftcdn.net/v2/jpg/06/57/35/37/1000_F_657353768_v5firOFWX8pTGIS1YF4qUQmusbKsoZxv.jpg" alt="Service 3">
+                <h2>Comprehensive Consultation</h2>
+                <p>Consult with our medical experts for thorough and comprehensive health evaluations.</p>
+            </div>
+
+            <div class="service-item">
+                <img src="https://as1.ftcdn.net/v2/jpg/06/62/88/80/1000_F_662888094_QCJooW0SdXbBvX7mnIHvL7h4VPdebiox.jpg" alt="Service 4">
+                <h2>Emergency Services</h2>
+                <p>Count on us for prompt and efficient emergency medical services available 24/7.</p>
+            </div>
+        </div>
     </main>
     <footer>
         <p>&copy; 2023 Hospital Web App</p>

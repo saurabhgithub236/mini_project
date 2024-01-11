@@ -1,16 +1,174 @@
+<!-- Add your styles and scripts in external files for better organization -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Web App</title>
+    <title>Hospital Web App - Medical Consultation</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        
-    </style>
+    <link rel="stylesheet" href="custom-styles.css"> <!-- Add custom styles -->
+     <style>
+header {
+    background: #3498db;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    max-height: 50px; /* Adjust the logo height */
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f5f5f5;
+}
+
+.btn-login {
+    background-color: #fff;
+    color: #3498db;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Main Section Styles */
+main {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Form Styles */
+form {
+    display: grid;
+    gap: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #3498db;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f5f5f5;
+}
+
+ footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #f0f0f0; /* Add background color as needed */
+    }
+
+    .social-icons {
+        display: flex;
+    }
+
+    .social-icons a {
+        margin-right: 10px; /* Adjust the spacing between icons as needed */
+    }
+</style>
 </head>
 <body>
     <header>
+        <img src="https://img.freepik.com/free-vector/hospital-logo-design-vector-medical-cross_53876-136743.jpg?w=2000" alt="Hospital Web App Logo"> <!-- Add a logo -->
+       
         <li type="none" id="title"><a href="/index.html">Hospital Web App</a></li> 
         <li type="none" id="login"><a href="./login.html">LOGIN/SIGNUP</a></li>
     </header>
@@ -19,18 +177,84 @@
             <li><a href="/bloodAvailability.html">Blood Availability</a></li>
             <li><a href="/nearestHospital.html">Nearest Hospitals</a></li>
             <li><a href="/services.html">Services</a></li>
-            <li><a href="/medicalConsultation.html">medical consultation</a></li>
-            <li><a href="/Rehabilatation.html">Rehabhilatation support</a></li>
-            <li><a href="/aboutUs.html">about us</a></li>
+            <li><a href="/medicalConsultation.html">Medical Consultation</a></li>
+            <li><a href="/Rehabilatation.html">Rehabilitation Support</a></li>
+            <li><a href="/aboutUs.html">About Us</a></li>
             <li><a href="/blog.html">Blog</a></li>
         </ul>
     </nav>
     <main>
-     
+        <h2>Medical Consultation Form</h2>
+        <form action="/submitConsultation" method="post">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="contactNumber">Contact Number:</label>
+            <input type="tel" id="contactNumber" name="contactNumber" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="medicalConcerns">Medical Concerns:</label>
+            <textarea id="medicalConcerns" name="medicalConcerns" rows="4" required></textarea>
+
+            <button type="submit">Submit Consultation</button>
+        </form>
     </main>
     <footer>
         <p>&copy; 2023 Hospital Web App</p>
+        <!-- 
+            <div class="social-icons">
+            <a href="https://www.facebook.com/YourHospitalPage" target="_blank" rel="noopener noreferrer">
+                <img src="https://i.pinimg.com/564x/b3/26/b5/b326b5f8d23cd1e0f18df4c9265416f7.jpg" alt="Facebook">
+            </a>
+            <a href="https://twitter.com/YourHospitalPage" target="_blank" rel="noopener noreferrer">
+                <img src="twitter-icon.png" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com/YourHospitalPage" target="_blank" rel="noopener noreferrer">
+                <img src="instagram-icon.png" alt="Instagram">    
+            //Add social media icons and links//
+        </div>
+    -->
     </footer>
+    <script src="app.js"></script>
+
+ 
+     
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    console.log('Script loaded successfully!');
+
+    // Form Validation
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', function(event) {
+        const fullName = document.getElementById('fullName');
+        const email = document.getElementById('email');
+        const contactNumber = document.getElementById('contactNumber');
+        const dob = document.getElementById('dob');
+        const gender = document.getElementById('gender');
+        const medicalConcerns = document.getElementById('medicalConcerns');
+
+        // Basic validation example (add more validation logic as needed)
+        if (!fullName.value || !email.value || !contactNumber.value || !dob.value || !gender.value || !medicalConcerns.value) {
+            alert('Please fill out all fields.');
+            event.preventDefault(); // Prevent form submission
+        }
+    });
+});
+
+    </script>
     <script src="app.js"></script>
 </body>
 </html>

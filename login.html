@@ -7,35 +7,42 @@
     <title>Hospital Web App - Login</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        
         main {
 
             margin: 20px 0;
             padding: 20px;
-            background-color: white;
+            background-color: rgb(145, 131, 131);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         #login-page {
-            display: block;
-            width: 100%;
-            height: 500px;
-        }
+    display: flex;
+    width: auto;
+    height: auto;
+}
 
-        #login-image {
-            display: inline;
-            width: 40%;
+#login-image {
+    width: auto;
+}
 
-        }
+#login-image img {
+    width: 1000px;
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
 
-        #login-image img {
-            display: inline;
-            height: 500px;
-        }
-
-        #login-form {
-            width: 40%;
-            height: 95%;
-        }
+#login-form {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 20px;
+    background-color: #88cff3; /* Add a background color to the form for better visibility */
+}
 
         h1 {
             margin: 0;
@@ -98,10 +105,11 @@
                 <form id="login-form">
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" required>
+                    <br><br><br><br>
 
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" required>
-
+                    <br><br><br><br>
                     <label for="role">Select your role:</label>
                     <select id="role" name="role">
                         <option value="user">User</option>
@@ -119,6 +127,7 @@
         <p>&copy; 2023 Hospital Web App</p>
     </footer>
     <script src="login.js"></script>
+    <script src="server.js"></script>
 </body>
 
 </html>
