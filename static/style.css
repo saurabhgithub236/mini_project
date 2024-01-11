@@ -62,7 +62,7 @@ nav {
 
 nav ul {
     list-style: none;
-    padding: auto;
+    padding: radial-gradient(circle, rgba(227,7,7,0.9332107843137255) 4%, rgba(213,213,213,1) 100%);
     display: flex;
     justify-content: space-around;
 }
