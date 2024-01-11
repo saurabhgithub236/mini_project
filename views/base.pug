@@ -1,0 +1,26 @@
+doctype html 
+html    
+    head 
+        title Technology in hospitals
+        style 
+            include ../static/style.css 
+    body 
+        header 
+            ul
+                li#title #[a(href="home.pug") Hospital Web app ]
+                li#login #[a(href="login.pug") Login ]
+     
+        nav.nav 
+            ul 
+                li #[a(href="/home.pug") Home ]
+                li #[a(href="/bloodAvailability.pug") BloodAvailability ]
+                li #[a(href="/nearestHospital.pug") nearest Hospital ]
+                li #[a(href="/services.pug") services ]
+                li #[a(href="/medicalConsultation.pug") medical Consultation]
+                li #[a(href="/Rehabilatation.pug") Rehabilatation]
+                li #[a(href="/aboutUs.pug") About us ]
+                li #[a(href="/blog.pug") blog ]
+        
+        block content 
+        footer
+            | p&copy; 2023 Hospital Web App

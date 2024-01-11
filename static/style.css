@@ -1,0 +1,96 @@
+/* Add your CSS styles here */
+*{ 
+    box-sizing: border-box;
+}
+/* body  */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* header  */
+header {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+   padding: 20px 0;
+   display: block;
+    
+}
+header ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+#title{
+    font-size: 2rem;
+}
+#title a{
+    text-decoration: none;
+    color: #dadada;
+}
+#login{
+    display: inline-block;
+    width: 135px;
+    height: 22px;
+    padding: 2px 9px;
+   margin-right: 10px;
+    border-radius: 15px;
+    background-color: #333;
+    
+}
+#login a{
+    text-decoration: none;
+    color: #dadada;
+}
+/* header li a{
+    list-style-type: none;
+    text-decoration: none;
+    color: burlywood;
+} */
+
+/* navbar  */
+nav {
+    background-color: #333;
+    color: rgb(196, 27, 27);
+    padding: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li a{
+    /* margin: auto;
+    padding: auto; */
+    font-size: 1.2rem;
+}
+
+nav a {
+    text-decoration: auto;
+    color: white;
+    /* font-size: 2rem; */
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+/* footer  */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
