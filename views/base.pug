@@ -2,8 +2,8 @@ doctype html
 html    
     head 
         title Technology in hospitals
-        style 
-            include ../static/style.css 
+        block scripts 
+        block style  
     body 
         header 
             ul
@@ -12,7 +12,7 @@ html
      
         nav.nav 
             ul 
-                li #[a(href="/home.pug") Home ]
+                li #[a(href="/") Home ]
                 li #[a(href="/bloodAvailability.pug") BloodAvailability ]
                 li #[a(href="/nearestHospital.pug") nearest Hospital ]
                 li #[a(href="/services.pug") services ]

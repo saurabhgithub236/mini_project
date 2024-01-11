@@ -20,26 +20,37 @@ app.get('/', (req, res)=>{
     res.status(200).render('home.pug', params);
 })
 
-app.get('/contact', (req, res)=>{
+app.get('/bloodAvailability.pug', (req, res)=>{
     
     const params = {}
-    res.status(200).render('contact.pug', params);
+    res.status(200).render('bloodAvailability.pug', params);
 })
-app.get('/contact', (req, res)=>{
+app.get('/login.pug', (req, res)=>{
     
     const params = {}
-    res.status(200).render('contact.pug', params);
+    res.status(200).render('login.pug', params);
 })
-app.get('/contact', (req, res)=>{
+app.get('/medicalConsultation.pug', (req, res)=>{
     
     const params = {}
-    res.status(200).render('contact.pug', params);
+    res.status(200).render('medicalConsultation.pug', params);
 })
-app.get('/contact', (req, res)=>{
+app.get('/nearestHospital.pug', (req, res)=>{
     
     const params = {}
-    res.status(200).render('contact.pug', params);
+    res.status(200).render('nearestHospital.pug', params);
 })
+app.get('/rehabilatation.pug', (req, res)=>{
+    
+    const params = {}
+    res.status(200).render('rehabilatation.pug', params);
+})
+app.get('/services.pug', (req, res)=>{
+    
+    const params = {}
+    res.status(200).render('services.pug', params);
+})
+
 
 
 
