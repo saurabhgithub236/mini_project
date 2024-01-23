@@ -1,0 +1,67 @@
+main {
+
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgb(145, 131, 131);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#login-page {
+display: flex;
+width: auto;
+height: auto;
+}
+
+#login-image {
+width: auto;
+}
+
+#login-image img {
+width: 1000px;
+height: auto;
+object-fit: cover;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+}
+
+#login-form {
+width: 100%;
+height: auto;
+padding: 10px;
+box-sizing: border-box;
+border-top-right-radius: 30px;
+border-bottom-right-radius: 20px;
+background-color: #88cff3; /* Add a background color to the form for better visibility */
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+h2 {
+    color: #3498db;
+}
+
+
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+ 

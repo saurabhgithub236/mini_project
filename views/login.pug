@@ -1,32 +1,27 @@
 extends base.pug
 
-block scripts 
+block scripts
 
-block style 
-    style 
-        include ../static/style.css 
+block style
+  style
+    include ../static/style.css
+    include ../static/loginstyle.css
 
-block content 
-    main
+block content
+  main
     #login-page
-        #login-image
-            img(src="https://plus.unsplash.com/premium_photo-1673953510197-0950d951c6d9?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt="img")
-        #login-form
-            h2 Login
-            form(id="login-form")
-                label(for="username") Username:
-                input(type="text", id="username", name="username", required)
-                br(br)(br)(br)
-                
-                label(for="password") Password:
-                input(type="password", id="password", name="password", required)
-                br(br)(br)(br)
-
-                label(for="role") Select your role:
-                select(id="role", name="role")
-                    option(value="user") User
-                    option(value="hospital") Hospital
-
-                button(type="submit") Log In
-
-            #login-status
+      #login-image
+        img(src="https://plus.unsplash.com/premium_photo-1673953510197-0950d951c6d9?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt="img")
+      #login-form
+        h2 Login
+        form(id="login-form")
+          label(for="username") Username:
+          input(type="text", id="username", name="username", required)
+          label(for="password") Password:
+          input(type="password", id="password", name="password", required)
+          label(for="role") Select your role:
+          select(id="role", name="role")
+            option(value="user") User
+            option(value="hospital") Hospital
+          button(type="submit") Log In
+        #login-status

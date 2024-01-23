@@ -5,5 +5,31 @@ block scripts
 block style 
     style 
         include ../static/style.css 
+        include ../static/services.css 
+        
 
-block content 
+block content
+  main
+    h1 Our Services
+    p Welcome to our hospital! We offer a range of services to cater to your health needs.
+
+    .services-container
+      .service-item
+        img(src="https://as2.ftcdn.net/v2/jpg/06/16/78/75/1000_F_616787557_ce1GXNmd6MNQvkeXTu3wmIW087mrxP5P.jpg", alt="Service 1")
+        h2 Specialized Care
+        p Receive personalized and specialized medical care from our experienced team.
+
+      .service-item
+        img(src="https://as2.ftcdn.net/v2/jpg/06/19/57/43/1000_F_619574308_pDeiP24dLD0lp7pmL5VOQGmu9RSVF5O5.jpg", alt="Service 2")
+        h2 State-of-the-Art Facilities
+        p Access cutting-edge medical facilities to ensure the best treatment outcomes.
+
+      .service-item
+        img(src="https://as2.ftcdn.net/v2/jpg/06/57/35/37/1000_F_657353768_v5firOFWX8pTGIS1YF4qUQmusbKsoZxv.jpg", alt="Service 3")
+        h2 Comprehensive Consultation
+        p Consult with our medical experts for thorough and comprehensive health evaluations.
+
+      .service-item
+        img(src="https://as1.ftcdn.net/v2/jpg/06/62/88/80/1000_F_662888094_QCJooW0SdXbBvX7mnIHvL7h4VPdebiox.jpg", alt="Service 4")
+        h2 Emergency Services
+        p Count on us for prompt and efficient emergency medical services available 24/7.
