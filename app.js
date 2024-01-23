@@ -62,7 +62,10 @@ app.get('/services', (req, res)=>{
 })
 
 
-
+//login functionality
+app.post('/login',(req,res)=>{
+    
+})
 
 
 // START THE SERVER

@@ -1,33 +1,15 @@
-document.getElementById('login-form').addEventListener('submit', function (e) {
-    e.preventDefault();
+function validateForm() {
+    var eamil = document.getElementById('eamil').value;
+    var password = document.getElementById('password').value;
+    var role = document.getElementById('role').value;
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    const role = document.getElementById('role').value;
+    // Simple validation, checking if fields are not empty
+    if (username.trim() === '' || password.trim() === '' || role.trim() === '') {
+      alert('All fields must be filled out');
+      return false; // Prevent form submission
+    }
 
-    // Send an AJAX request to your server to handle the login based on the role
-    fetch('/login', {
-        method: 'POST',
-        body: JSON.stringify({ username, password, role }),
-        headers: {
-            'Content-Type': 'application/json',
-        },
-    })
-    .then(response => response.json())
-    .then(data => {
-        const loginStatus = document.getElementById('login-status');
-        if (data.success) {
-            loginStatus.textContent = 'Login successful. Redirecting...';
-            
-            // Redirect to the appropriate dashboard based on the role
-            window.location.href = http://127.0.0.1:5501/services.html;
-        } else {
-            loginStatus.textContent = 'Login failed. Please check your credentials.';
-        }
-    })
-    .catch(error => {
-        console.error('Error during login:', error);
-        const loginStatus = document.getElementById('login-status');
-        loginStatus.textContent = 'An error occurred during login. Please try again.';
-    });
-});
+    // Additional validation logic can be added here
+
+    return true; // Allow form submission
+  }
