@@ -7,3 +7,28 @@ block style
         include ../static/style.css 
 
 block content 
+    main
+    h2 Medical Consultation Form
+    form(action="/submitConsultation", method="post")
+      label(for="fullName") Full Name:
+      input(type="text", id="fullName", name="fullName", required)
+    
+      label(for="email") Email:
+      input(type="email", id="email", name="email", required)
+    
+      label(for="contactNumber") Contact Number:
+      input(type="tel", id="contactNumber", name="contactNumber", required)
+    
+      label(for="dob") Date of Birth:
+      input(type="date", id="dob", name="dob", required)
+    
+      label(for="gender") Gender:
+      select(id="gender", name="gender", required)
+        option(value="male") Male
+        option(value="female") Female
+        option(value="other") Other
+    
+      label(for="medicalConcerns") Medical Concerns:
+      textarea(id="medicalConcerns", name="medicalConcerns", rows="4", required)
+    
+      button(type="submit") Submit Consultation
