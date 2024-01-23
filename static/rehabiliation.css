@@ -1,0 +1,98 @@
+/* Hero section */
+.hero-section {
+    background-color: #3498db;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+}
+
+/* Overview section */
+.overview-section,
+.facilities-section,
+.success-stories-section,
+.contact-section,
+.additional-content {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.overview-section h2,
+.facilities-section h2,
+.success-stories-section h2,
+.contact-section h2,
+.additional-content h2 {
+    color: #3498db;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.overview-section p,
+.facilities-section p,
+.success-stories-section p,
+.contact-section p,
+.additional-content p {
+    font-size: 1.2rem;
+}
+
+.overview-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.overview-section li {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Success Stories section */
+.success-story {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.success-story h3 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+/* Contact section */
+.contact-form {
+    margin-top: 20px;
+}
+
+/* Additional Content section */
+.additional-content {
+    background-color: #34495e;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.additional-content h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.additional-content p {
+    font-size: 1.2rem;
+}
