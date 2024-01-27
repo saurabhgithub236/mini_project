@@ -1,9 +1,33 @@
-const express=require("express")
-const path=require("path")
-const fs=require("fs")
+import express  from "express";
+import  path from "path";
+import fs from "fs";
+import morgan from "morgan";
+import colors from "colors";
+import dotenv from "dotenv";
+import connectDB from "./config/db.js"
+import pug from "pug"
+import authRoutes from "./routes/authRoutes.js"
+
+
+import viewsDirectory from './viewsDirectory.js';//to set the views directory using app.set()
+
+
+//DOTENV SPECIFIC STUFF
+dotenv.config();
+
+//connect to database
+connectDB();
+
+
 const app=express()
-const hostname = '127.0.0.1'
-const port = 8000;
+
+
+
+// middlewares 
+app.use(express.json())
+app.use(morgan('dev'))
+
+
 
 // EXPRESS SPECIFIC STUFF
 app.use('/static', express.static('static')) // For serving static files
@@ -11,8 +35,13 @@ app.use(express.urlencoded())
 
 // PUG SPECIFIC STUFF
 app.set('view engine', 'pug') // Set the template engine as pug
-app.set('views', path.join(__dirname, 'views')) // Set the views directory
+app.set('views', viewsDirectory); // Set the views directory
+
  
+// routes 
+app.use('/api/v1/auth',authRoutes);
+
+
 // ENDPOINTS
 app.get('/', (req, res)=>{
     
@@ -62,18 +91,15 @@ app.get('/services', (req, res)=>{
 })
 
 
-//login functionality
-app.post('/login',(req,res)=>{
-    
-})
 
-
+const PORT = process.env.PORT;
+const HOSTNAME = process.env.HOSTNAME
 // START THE SERVER
 // app.listen(port, ()=>{
 //     console.log(`The application started successfully on port ${port}`);
 // });
 
 //starting the server
-app.listen(port, () => {
-    console.log(`The application has started on port http://${hostname}:${port}/`);
+app.listen(PORT,HOSTNAME,() => {
+    console.log(`The application has started on port http://${HOSTNAME}:${PORT}`.bgWhite.cyan);
 })
